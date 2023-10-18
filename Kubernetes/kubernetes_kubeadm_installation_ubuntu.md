@@ -21,9 +21,9 @@ _The first thing we need to do after launching the instance is to set the hostna
 
 ## To set Hostname according to the server
 
-- __[master]__ - hostnamectl set-hostname master
-- __[Node-01]__ - hostnamectl set-hostname node01
-- __[Node-02]__ - hostnamectl set-hostname node02
+- __[master]__    - hostnamectl set-hostname master
+- __[Node-01]__   - hostnamectl set-hostname node01
+- __[Node-02]__   - hostnamectl set-hostname node02
 
 
 ## 2 Disable swap on all the servers
