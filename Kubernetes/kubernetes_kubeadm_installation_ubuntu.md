@@ -107,7 +107,7 @@ export KUBECONFIG=$HOME/admin.conf
 kubeadm join 172.16.1.120:6443 --token yk249g.k2r8goq7w3udstns --cri-socket "unix:///var/run/cri-dockerd.sock" --discovery-token-ca-cert-hash sha256:06eaaa2c442aee7ba072c2ce7322c9f089ee8be4bddf1bae706bc1f79b454cfc
 ```
 
-certificate and token here will be different for you copy your join command and add the below line 
+==certificate and token here will be different for you copy your join command and add the below line==
 --cri-socket "unix:///var/run/cri-dockerd.sock"
 
 
