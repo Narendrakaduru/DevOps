@@ -52,8 +52,8 @@ sudo ufw allow 10259/tcp
 
 #### Allow the ports on worker nodes
 ```sh
-ufw allow 10250/tcp
-ufw allow 30000:32767/tcp
+sudo ufw allow 10250/tcp
+sudo ufw allow 30000:32767/tcp
 ```
 
 ## 4 - Install docker on all servers
