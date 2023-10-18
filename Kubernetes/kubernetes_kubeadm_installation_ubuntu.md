@@ -6,17 +6,15 @@ We will be using 3 nodes to configure Kubernetes using kubeadm
 aws cloud requires t2.medium of 3 Instances
 if it is VM 4CPU and 4GB RAM is required
 
-## S.NO					   server name				hostname
-##################################################################
+## Set Server name and hostname
 server1			--			master					master			
 server2			--			Node-01					node01
 server3			--			Node-02					node02
 
-The first thing we need to do after launching the instance is to set the hostname and disable the swap.
+_The first thing we need to do after launching the instance is to set the hostname and disable the swap._
 
 
-## 1 To set Hostname according to the server
-##################################################################
+## To set Hostname according to the server
 <pre class="shiki" style="background-color: #ffffff">
 hostnamectl set-hostname master   --  master
 </pre>
