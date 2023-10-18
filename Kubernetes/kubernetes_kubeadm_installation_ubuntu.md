@@ -63,7 +63,7 @@ chmod +x install-docker.sh
 ./install-docker.sh
 ```
 
-## 5 - Install cri-dockerd
+## 5 - Install cri-dockerd on all servers
 ```sh
 git clone https://github.com/Mirantis/cri-dockerd.git
 cd cri-dockerd
