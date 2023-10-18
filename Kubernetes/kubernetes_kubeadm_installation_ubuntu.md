@@ -1,3 +1,6 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+</head>
 # Install Kubernetes using kubeadm
 
 ## _Note: Every command should be run as root user only_
