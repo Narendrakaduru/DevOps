@@ -9,7 +9,7 @@ _We will be using 3 nodes to configure Kubernetes using kubeadm_
 aws cloud requires t2.medium of 3 Instances
 if it is VM 4CPU and 4GB RAM is required
 
-## Set Server name and hostname
+## 1 - Set Server name and hostname
 | S.NO | Server Name | HostName |
 | ---- | ----------- | -------- |
 | server1	| master | master |
@@ -26,7 +26,7 @@ _The first thing we need to do after launching the instance is to set the hostna
 - __[Node-02]__   - hostnamectl set-hostname node02
 
 
-## 2 Disable swap on all the servers
+## 2 - Disable swap on all the servers
 ```sh
 sudo swapoff -a
 ```
@@ -39,7 +39,7 @@ restart the server -- sudo init 6 or sudo reboot
 sudo init 6
 ```
 
-## 3 Allow Ports
+## 3 - Allow Ports
 
 #### Allow the ports on the master or control plane
 ```sh
@@ -56,14 +56,14 @@ ufw allow 10250/tcp
 ufw allow 30000:32767/tcp
 ```
 
-## 4 Install docker on all servers
+## 4 - Install docker on all servers
 ```sh
 curl -fsSL https://get.docker.com -o install-docker.sh
 chmod +x install-docker.sh
 ./install-docker.sh
 ```
 
-## 5 Install cri-dockerd
+## 5 - Install cri-dockerd
 ```sh
 git clone https://github.com/Mirantis/cri-dockerd.git
 cd cri-dockerd
@@ -75,7 +75,7 @@ systemctl daemon-reload
 systemctl enable --now cri-docker.socket
 ```
 
-## 6 Install Kubernetes on all servers
+## 6 - Install Kubernetes on all servers
 ```sh
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
@@ -88,7 +88,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-## 7 Kubeadm Init on only Master Node(Important!!!)
+## 7 - Kubeadm Init on only Master Node(Important!!!)
 ```sh
 kubeadm init --pod-network-cidr "10.244.0.0/16" --cri-socket "unix:///var/run/cri-dockerd.sock"
 ```
@@ -102,7 +102,7 @@ sudo chown $(id -u):$(id -g) $HOME/admin.conf
 export KUBECONFIG=$HOME/admin.conf
 ```
 
-## 8 Kubeadm join as root from Node-01 and Node-02
+## 8 - Kubeadm join as root from Node-01 and Node-02
 ```sh
 kubeadm join 172.16.1.120:6443 --token yk249g.k2r8goq7w3udstns --cri-socket "unix:///var/run/cri-dockerd.sock" --discovery-token-ca-cert-hash sha256:06eaaa2c442aee7ba072c2ce7322c9f089ee8be4bddf1bae706bc1f79b454cfc
 ```
@@ -111,7 +111,7 @@ certificate and token here will be different for you copy your join command and 
 --cri-socket "unix:///var/run/cri-dockerd.sock"
 
 
-## 9 Creating Network for Kubernetes on master node
+## 9 - Creating Network for Kubernetes on master node
 ```sh
 kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
 ```
