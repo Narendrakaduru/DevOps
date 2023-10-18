@@ -28,14 +28,17 @@ _The first thing we need to do after launching the instance is to set the hostna
 
 ## 2 Disable swap on all the servers
 ##################################################################
+```sh
 sudo swapoff -a
-
-# To disable swap permanently
+```
+#### To disable swap permanently
 vi /etc/fstab  --> comment out /swap using # in front of it
 ex: #/swap ext4 0 2
 
 restart the server -- sudo init 6 or sudo reboot
-
+```sh
+sudo init 6
+```
 
 ## 3 Allow Ports
 ##################################################################
