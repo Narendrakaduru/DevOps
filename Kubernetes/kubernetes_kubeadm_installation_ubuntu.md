@@ -1,5 +1,8 @@
-Note: Every command should be run as root user only
+# Install Kubernetes using kubeadm
 
+## _Note: Every command should be run as root user only_
+
+## Pre-requisites:
 We will be using 3 nodes to configure Kubernetes using kubeadm
 1 will be the master node and the other 2 as worker nodes
 
@@ -7,20 +10,21 @@ aws cloud requires t2.medium of 3 Instances
 if it is VM 4CPU and 4GB RAM is required
 
 ## Set Server name and hostname
+<pre class="shiki" style="background-color: #ffffff">
 server1			--			master					master			
 server2			--			Node-01					node01
 server3			--			Node-02					node02
+</pre>
 
 _The first thing we need to do after launching the instance is to set the hostname and disable the swap._
 
 
 ## To set Hostname according to the server
-<pre class="shiki" style="background-color: #ffffff">
+```sh
 hostnamectl set-hostname master   --  master
-</pre>
 hostnamectl set-hostname node01   --  Node-01	
 hostnamectl set-hostname node02   --  Node-02	
-
+```
 
 ## 2 Disable swap on all the servers
 ##################################################################
