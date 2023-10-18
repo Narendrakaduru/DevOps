@@ -3,6 +3,7 @@
 </head>
 # Install Kubernetes using kubeadm
 
+<body>
 ## _Note: Every command should be run as root user only_
 
 ## Pre-requisites:
@@ -112,3 +113,5 @@ certificate and token here will be different for you copy your join command and 
 ## 9 Creating Network for Kubernetes on master node
 ##################################################################
 kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
+
+</body>
