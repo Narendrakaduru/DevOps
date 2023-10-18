@@ -1,9 +1,9 @@
 # Install Kubernetes using kubeadm
 
-## _Note: Every command should be run as root user only_
+_Note: Every command should be run as root user only_
 
 ## Pre-requisites:
-We will be using 3 nodes to configure Kubernetes using kubeadm
+_We will be using 3 nodes to configure Kubernetes using kubeadm_
 1 will be the master node and the other 2 as worker nodes
 
 aws cloud requires t2.medium of 3 Instances
