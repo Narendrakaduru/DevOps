@@ -27,7 +27,6 @@ _The first thing we need to do after launching the instance is to set the hostna
 
 
 ## 2 Disable swap on all the servers
-##################################################################
 ```sh
 sudo swapoff -a
 ```
