@@ -115,7 +115,3 @@ kubeadm join 172.16.1.120:6443 --token yk249g.k2r8goq7w3udstns --cri-socket "uni
 ```sh
 kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
 ```
-var md = require('markdown-it')()
-            .use(require('markdown-it-mark'));
-
-md.render('==marked==')
