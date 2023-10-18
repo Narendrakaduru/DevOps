@@ -10,11 +10,11 @@ aws cloud requires t2.medium of 3 Instances
 if it is VM 4CPU and 4GB RAM is required
 
 ## Set Server name and hostname
-<pre class="shiki" style="background-color: #ffffff">
-server1			--			master					master			
-server2			--			Node-01					node01
-server3			--			Node-02					node02
-</pre>
+| S.NO | Server Name | HostName |
+| ---- | ----------- | -------- |
+| server1	| master | master |
+| server2	| Node-01	| node01 |
+| server3	|	Node-02	| node02 |
 
 _The first thing we need to do after launching the instance is to set the hostname and disable the swap._
 
