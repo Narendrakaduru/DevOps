@@ -106,11 +106,13 @@ export KUBECONFIG=$HOME/admin.conf
 ```sh
 kubeadm join 172.16.1.120:6443 --token yk249g.k2r8goq7w3udstns --cri-socket "unix:///var/run/cri-dockerd.sock" --discovery-token-ca-cert-hash sha256:06eaaa2c442aee7ba072c2ce7322c9f089ee8be4bddf1bae706bc1f79b454cfc
 ```
-<p style="background-color:#4ab065,padding:10px">certificate and token here will be different for you copy your join command and add the below line</p>
+::: warning
+*certificate and token here will be different for you copy your join command and add the below line*
+:::
 --cri-socket "unix:///var/run/cri-dockerd.sock"
 
 
-## 9 - Creating Network for Kubernetes on master node
+## 9 - Creating a Network for Kubernetes on the master node
 ```sh
 kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
 ```
