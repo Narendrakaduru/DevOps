@@ -9,7 +9,7 @@ _We will be using 3 nodes to configure Kubernetes using kubeadm_
 aws cloud requires t2.medium of 3 Instances
 if it is VM 4CPU and 4GB RAM is required
 
-## 1 - Set Server name and hostname
+## 1 - Set hostname
 | S.NO | Server Name | HostName |
 | ---- | ----------- | -------- |
 | server1	| master | master |
