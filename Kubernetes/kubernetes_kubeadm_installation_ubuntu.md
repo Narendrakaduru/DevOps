@@ -67,6 +67,9 @@ chmod +x install-docker.sh
 ```sh
 git clone https://github.com/Mirantis/cri-dockerd.git
 cd cri-dockerd
+mkdir bin
+apt install golang-go -y
+go build -o bin/cri-dockerd
 mkdir -p /usr/local/bin
 install -o root -g root -m 0755 ~/cri-dockerd/bin/cri-dockerd /usr/local/bin/cri-dockerd
 install ~/cri-dockerd/packaging/systemd/* /etc/systemd/system
